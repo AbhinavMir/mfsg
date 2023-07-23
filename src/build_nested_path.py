@@ -1,5 +1,5 @@
 import os
-from typing import Optional, Union
+from typing import Optional
 from .tree_node import TreeNode
 
 def crawl_directories(directory_path: str) -> Optional[TreeNode]:
