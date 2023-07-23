@@ -9,6 +9,12 @@ class TreeNode:
     def add_child(self, child: 'TreeNode') -> None:
         self.children.append(child)
 
+    def __repr__(self, level: int = 0) -> str:
+        result = "  " * level + f"- {self.name}\n"
+        for child in self.children:
+            result += child.__repr__(level + 1)
+        return result
+
 def build_tree(directory_path: str) -> Optional[TreeNode]:
     if not os.path.isdir(directory_path):
         return None
@@ -29,14 +35,10 @@ def build_tree(directory_path: str) -> Optional[TreeNode]:
 
     return root
 
-def print_tree(node: TreeNode, level: int = 0) -> None:
-    print("  " * level + f"- {node.name}")
-    for child in node.children:
-        print_tree(child, level + 1)
 
 # Example usage:
 if __name__ == "__main__":
     content_dir = "/Users/abhinavmir/Desktop/Code/mfsg/tests/content"
     tree = build_tree(content_dir)
     if tree:
-        print_tree(tree)
+        print(tree)
