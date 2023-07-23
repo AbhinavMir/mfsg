@@ -1,0 +1,52 @@
+body{
+    color: #444;
+    background-color: #EEE;
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6em;
+    font-size: 18px;
+    padding: 0;
+}
+
+/* GitHub-style code block */
+pre {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+  }
+  
+  /* Syntax highlighting for code */
+  pre code {
+    display: block;
+    color: #333;
+  }
+  
+  /* Line numbers for code block */
+  pre .line-numbers {
+    display: inline-block;
+    padding-right: 10px;
+    color: #777;
+    text-align: right;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  /* Code block content */
+  pre .code-content {
+    display: inline-block;
+    vertical-align: top;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  
+  /* Highlighted lines */
+  pre .highlight-line {
+    background-color: #ffe5b4;
+    display: block;
+  }
+  
